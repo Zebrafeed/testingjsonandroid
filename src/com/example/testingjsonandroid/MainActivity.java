@@ -39,16 +39,9 @@ public class MainActivity extends Activity {
 		CharSequence meta = null;
 		int duration = Toast.LENGTH_LONG;
 		
-//		LayoutInflater vi = (LayoutInflater) getApplicationContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-//		View v = vi.inflate(R.layout.post, null);
-//		tv = (TextView) v.findViewById(R.id.title);
-//		tv.setText("WOOOOOHOOOO");
-//		View insertPoint = findViewById(R.id.scrollViewLinearWrapper);
-//		((ViewGroup) insertPoint).addView(v, 0, new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
-
-		
+	
 		try {
-			jsonArray = new FetchPosts().execute("http://192.168.1.76/backend/modules/posts/fetchposts.php").get();
+			jsonArray = new FetchPosts().execute("http://zebrafeedstudio.se/backend/modules/posts/fetchposts.php").get();
 			for(int i = 0; i < jsonArray.length(); i++){
 				title = (CharSequence) jsonArray.getJSONObject(i).get("title");
 				content = (CharSequence) jsonArray.getJSONObject(i).get("text");

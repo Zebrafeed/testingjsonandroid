@@ -15,7 +15,7 @@ import org.json.JSONObject;
 
 
 public class JsonFetcher {
-
+//Läser information från en inputstream och returnerar informationen som en string.
   private static String readAll(Reader rd) throws IOException {
     StringBuilder sb = new StringBuilder();
     int cp;
